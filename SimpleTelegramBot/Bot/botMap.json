@@ -1,0 +1,36 @@
+{
+  "Rooms": [
+    {
+      "Id": "start",
+      "AutoGo": "HelloBot"
+    },
+    {
+      "Id": "HelloBot",
+      "List": "Простой бот",
+      "Items": [
+        {
+          "Button": "Скачать карту",
+          "Go": "botmap"
+        },
+        {
+          "Button": "Генерировать страницу",
+          "Go": "Generated"
+        }
+      ]
+    },
+    {
+      "Id": "botmap",
+      "Do": "SendConfig",
+      "AutoGo": "HelloBot"
+    },
+    {
+      "Id": "Generated",
+      "Gen": "HelloGenerated"
+    },
+    {
+      "Id": "underconstruction",
+      "Say": "В разработке",
+      "Go": "HelloBot"
+    }
+  ] 
+}
