@@ -6,22 +6,15 @@ using Bot.PublicModel.ActionResult;
 using Suit.Logs;
 using TelegramBot.Tools;
 
-namespace SimpleTelegramBot.Tools
+namespace SimpleTelegramBot.Bot
 {
-    class HelloBot: IActionManagerSettings
+    class BotActions: IActionManagerSettings
     {
         private readonly ILog log;
-        private readonly ITelegramBotManager botManager;
 
-        public HelloBot(ILog log, ITelegramBotManager botManager)
+        public BotActions(ILog log)
         {
             this.log = log;
-            this.botManager = botManager;
-        }
-
-        public void Start()
-        {
-            botManager.Start();
         }
 
         public async Task<ActionResult> DoAction(ActionArguments arguments)
@@ -32,7 +25,10 @@ namespace SimpleTelegramBot.Tools
                     return new PicAndCaptionResult()
                     {
                         Caption = "Генерируем какие-то бизнес данные, строим графики",
-                        Pic = File.ReadAllBytes("Content/Gen.png"),
+                        
+                        // this pic can be generated depends on business logic
+                        Pic = File.ReadAllBytes("Bot/Gen/Gen.png"),
+
                         NameGoes = new NameGo[]
                         {
                             ("Статус", "underconstruction"),

@@ -1,6 +1,4 @@
-﻿using Suit;
-using SimpleTelegramBot.Tools;
-using TelegramBot.Tools;
+﻿using SimpleTelegramBot.Tools;
 using Unity;
 
 namespace SimpleTelegramBot
@@ -9,11 +7,7 @@ namespace SimpleTelegramBot
     {
         public static void Register(UnityContainer container)
         {
-            container.RegisterSingleton<Settings>();
-            container.RegisterFactory<ITelegramBotManagerSettings>(c => IoC.Get<Settings>());
-
-            container.RegisterSingleton<HelloBot>();
-            container.RegisterFactory<IActionManagerSettings>(c => IoC.Get<HelloBot>());
+            //todo: you business logic
         }
     }
 }

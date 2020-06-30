@@ -1,11 +1,3 @@
 ﻿{
-  "ToCreateYourBot Go here": "http:/t.me/botfather",
-  "Bots": [
-    {
-      "Name": "@vasy_do_it_bot",
-      "BotMapFile": "C:\\Projects\\SimpleTelegramBot\\SimpleTelegramBot\\Bot\\botmap.json",
-      "BotToken": "1245398123:AAEz5SV8Jgt0L8NaEXj-3yWddqOWesNVaIk",
-      "Content": "C:\\Projects\\SimpleTelegramBot\\SimpleTelegramBot\\Bot\\BotContent"
-    }
-  ]
+  "This is your settings fie": "it is not used for the bot" 
 }

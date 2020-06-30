@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using System.Threading;
+using SimpleTelegramBot.Bot;
+using SimpleTelegramBot.Tools;
 using Suit;
 using Suit.Logs;
-using SimpleTelegramBot.Tools;
 using TelegramBot;
 
 namespace SimpleTelegramBot
@@ -12,7 +13,8 @@ namespace SimpleTelegramBot
     {
         static Program()
         {
-            IoC.Configure(IoCTelegramBot.Register, IoCSimpleTelegramBot.Register);
+            // suit + telegramBotEngine + theBot + youBusinessLogic
+            IoC.Configure(IoCTelegramBot.Register, IoCBot.Register, IoCSimpleTelegramBot.Register);
         }
 
         static void Main(string[] args)
@@ -21,7 +23,7 @@ namespace SimpleTelegramBot
 
             log.Debug("### Start console ###");
 
-            IoC.Get<HelloBot>().Start();
+            IoC.Get<MyTool>().Start();
 
             Console.ReadLine();
 
