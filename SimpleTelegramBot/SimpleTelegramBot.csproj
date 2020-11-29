@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,13 +15,22 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="NLog" Version="4.7.2" />
-    <PackageReference Include="shmykov.dev.Suit" Version="1.0.0" />
-    <PackageReference Include="shmykov.dev.TelegramBot" Version="1.0.4" />
-    <PackageReference Include="Unity" Version="5.11.7" />
+    <PackageReference Include="NLog" Version="4.7.5" />
+    <PackageReference Include="shmykov.dev.Suit" Version="1.0.4" />
+    <PackageReference Include="shmykov.dev.TelegramBot" Version="1.0.7" />
+    <PackageReference Include="Unity" Version="5.11.9" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Bot\BotContent\helloBot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Bot\BotContent\underconstruction.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Bot\botMap.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Bot\botSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

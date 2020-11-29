@@ -13,7 +13,10 @@ namespace SimpleTelegramBot.Bot
         {
             botSettings = File.ReadAllText("Bot/BotSettings.json").FromJson<SingleBotSettings>();
         }
-
         public SingleBotSettings[] Bots => new[] { botSettings };
+        public string BotFiles => "https://api.telegram.org/file/bot<token>/<file_path>";
+        public string GetBotFile(string token, string path) =>
+            BotFiles.Replace("<token>", token).Replace("<file_path>", path);
+
     }
 }

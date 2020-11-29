@@ -10,9 +10,10 @@ namespace SimpleTelegramBot.Bot
         {
             container.RegisterSingleton<BotSettings>();
             container.RegisterFactory<ITelegramBotManagerSettings>(c => IoC.Get<BotSettings>());
+            container.RegisterFactory<IActionManagerSettings>(c => IoC.Get<BotSettings>());
 
             container.RegisterSingleton<BotActions>();
-            container.RegisterFactory<IActionManagerSettings>(c => IoC.Get<BotActions>());
+            container.RegisterFactory<IActionManager>(c => IoC.Get<BotActions>());
         }
     }
 }

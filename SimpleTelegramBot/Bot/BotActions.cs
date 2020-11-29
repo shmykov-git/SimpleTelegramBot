@@ -8,7 +8,7 @@ using TelegramBot.Tools;
 
 namespace SimpleTelegramBot.Bot
 {
-    class BotActions: IActionManagerSettings
+    class BotActions: IActionManager
     {
         private readonly ILog log;
 
