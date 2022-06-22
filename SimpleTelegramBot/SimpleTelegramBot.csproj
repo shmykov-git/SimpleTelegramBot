@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog" Version="4.7.5" />
     <PackageReference Include="shmykov.dev.Suit" Version="1.0.4" />
     <PackageReference Include="shmykov.dev.TelegramBot" Version="1.0.7" />
